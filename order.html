@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG-vende</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="resmas.html"> Resmas </a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <aside>
+        <img class="logo" src="images/MG.png" alt="MG Vende">
+    </aside>
+
+    <h1> ORDER </h1>
+
+    <div class="resma">
+        <img src="" alt="">
+        <div class="columns">
+            <div class="title"> </div>
+            <div clase="price"> </div>
+        </div>
+        <p></p>
+    </div>
+
+    <form action="http://jkorpela.fi/cgi-bin/echo.cgi", method="POST">
+        <div class="input-group">
+            <div>
+                <label for="first-name"> Nombre </label>
+            </div>
+            <div>
+                <input type="text" name="first-name" id="first-name">
+            </div>
+        </div>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Order">
+        
+    </form>
+    
+</main>
+<footer>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="resmas.html"> Resmas </a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+
+<script>
+    window.addEventListener("DOMContentLoaded",() => {
+        const order = localStorage.getItem("order")
+        if ( order ) {
+            const resmasOrder = JSON.parse(order) 
+
+            const  resma= document.querySelector(".resma")
+            const title = resma.querySelector(".title")
+            const price = resma.querySelector(".price")
+
+            title.innerText = resmasOrder.title
+            price.innerText = resmasOrder.price
+
+            const img = resma.querySelector("img")
+
+            img.setAttribute("src", images/${resmasOrder.id}.jpg)
+        }
+    })
+</script>
+</html>

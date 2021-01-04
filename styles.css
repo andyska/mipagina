@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: gray;
+}
+
+p{
+    margin: 0.5em 0 0.5em 0;
+}
+header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(22, 70, 110);
+    padding: 10px;
+    
+}
+
+nav a:visited,
+nav a:link{
+    color: white;
+    text-decoration: none;
+}
+
+nav>ul {
+    display: inline;
+    padding: 0;
+}
+nav>ul>li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 15px 0 15px;
+}
+
+main{
+    display: flex;
+    background-image: url("/images/fondoalpillera.jpg");
+    padding-top: 3em;
+    padding-bottom: 3em;
+    height: 80%;
+}
+
+footer{
+    padding: 15px;
+}
+aside,
+article {
+    padding: 2em;
+}
+
+aside{
+    text-align: center;
+}
+.banner {
+    width: 100%;
+   
+}
+
+article{
+    width: 90%;
+}
+
+@media only screen and (min-width: 768 px) {
+    main {
+        display: flex;
+        max-width: 80%;
+    }
+    aside {
+        margin-left: 2%;
+    }
+}
+.logo {
+    max-width: 45%;
+}
+h1{
+    font-size: 3em;
+    margin-top: 0.5em;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8, 4px 0px 2px rgba(216,61,198,0);
+}
+
+.sub-title{
+  /*  background-color: darkgrey;*/
+    font-size: 1.5em;
+    padding: 10px;
+    border: solid 2px white;
+
+    background: #09D973;
+    background: -moz-linear-gradient(top, #d7f8e8 0%, #ade1f8 100%);
+    background: -webkit-linear-gradient(top, #d7f8e8 0%, #ade1f8 100%);
+    background: linear-gradient(to bottom, #d7f8e8 0%, #ade1f8 100%);
+
+}
+
+.columns-desktop{
+    display: flex;
+    margin-top: 1em;
+}
+
+.resma-image{
+    max-width: 30%;
+}
+
+/* catalogo */
+.resma{
+    width: 280px;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(223, 226, 226);
+    border: solid 3px gray;
+}
+
+.resma img{
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.resma .title{
+    font-weight: bold;     
+}
+.resma .price{
+    text-align: right;   
+    font-weight: bold;
+    color: #130f31;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+
+}
+
+.resma .columns{
+    max-width: 100%;
+    display: flex;
+}
+.resma .columns div{
+    width: 50%;
+}
+.resma button{
+    background-color: rgb(132, 248, 108);
+    padding: 10px;
+    border: 5px ridge #13a851;
+    border-radius: 10px;
+}
+
+.resma .center{
+    text-align:center;
+    width: 30%;
+ }
+
+.resma .center_i{
+    text-align: center;
+    
+}
