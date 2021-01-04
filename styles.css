@@ -136,6 +136,7 @@ h1{
 
 .resma .columns{
     max-width: 100%;
+    max-height: 50%;
     display: flex;
 }
 .resma .columns div{
@@ -148,10 +149,14 @@ h1{
     border-radius: 10px;
 }
 
+.resma p{
+    font-size: 12px;
+    font-style: italic;
+    text-align: left;
+}
 .resma .center{
     text-align:center;
-    width: 30%;
- }
+   }
 
 .resma .center_i{
     text-align: center;
