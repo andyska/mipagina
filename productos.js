@@ -1,5 +1,8 @@
 window.addEventListener("DOMContentLoaded", () =>{
-    cons orderButtons = document.querySelectorAll("button[data-order]");
+    //aqui recupero todos los botones que tienen la propiedad data-order
+    const orderButtons = document.querySelectorAll("button[data-order]");
+
+    //console.log(orderButtons)
 
     orderButtons.forEach((item) => {
         //por cada uno de los botones escucha...
@@ -11,8 +14,8 @@ window.addEventListener("DOMContentLoaded", () =>{
             //nodo padre del boton
             const container = button.parentNode
            
-            //console.log(button)
-            //console.log(container)
+            console.log(button)
+            console.log(container)
 
             const order={
                 id: button.getAttribute("data-order"),
@@ -20,13 +23,14 @@ window.addEventListener("DOMContentLoaded", () =>{
                 price: container.querySelector(".price").innerText
             }
 
-            //console.log(order)
+            console.log(order)
+            
             localStorage.setItem("order", JSON.stringify(order))
             // busco url donde estoy y la reemplace por la order
-            const url= window.location.href.replace("resmas.html", "order.html")
+            const url= window.location.href.replace("productos.html", "order.html")
             //aqui provoca el cambio de pagina
             window.location.href = url
 
-        })
+            })
     });
 });

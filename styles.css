@@ -78,7 +78,7 @@ article{
     }
 }
 .logo {
-    max-width: 45%;
+    max-width: 50%;
 }
 h1{
     font-size: 3em;
@@ -100,15 +100,23 @@ h1{
 }
 
 .columns-desktop{
-    display: flex;
+    display: flexbox;
     margin-top: 1em;
 }
 
 .resma-image{
-    max-width: 30%;
+    max-width: 60%;
 }
 
+
 /* catalogo */
+#global{
+    height: 400px;
+	width: 350px;
+	border: 1px solid #ddd;
+	background: grey;
+    overflow-x: scroll;
+}
 .resma{
     width: 280px;
     padding: 10px;
@@ -131,7 +139,6 @@ h1{
     font-weight: bold;
     color: #130f31;
     text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
-
 }
 
 .resma .columns{
@@ -148,12 +155,31 @@ h1{
     border-radius: 10px;
 }
 
-.resma .center{
-    text-align:center;
-    width: 30%;
- }
-
 .resma .center_i{
     text-align: center;
-    
+}
+
+/*order*/
+#imagen{
+background-color: white;
+width: 30%;
+height: 30%;
+}
+
+.input-group{
+    padding: 2px;
+}
+
+.domicilio{
+    padding: 10px;
+    margin: 2px;
+}
+.horizontal{
+    display: flex;
+    padding: 5px;
+    margin: 2px;
+}
+
+.center_i{
+    text-align: center;
 }
